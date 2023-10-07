@@ -7,11 +7,16 @@ const SERVER_HOST = "localhost"
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
+app.use(express.static("./views"))
 
 //http://localhost:3000/
 app.get('/', function (req, res) {
     res.send("<h1>Home Page</h1>")
+})
+
+//http://localhost:3000/Ramyasree
+app.get('/Ramyasree', function (req, res) {
+  res.send("<h1>C0880419</h1>")
 })
 
 //http://localhost:3000/profile
